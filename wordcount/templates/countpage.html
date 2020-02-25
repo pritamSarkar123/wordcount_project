@@ -1,0 +1,12 @@
+<head>
+    <title>The count page</title>
+</head>
+<body>
+    <a href={% url 'home' %}>return back to the home page</a>
+    <h1>The original text</h1><br/>
+    <p>{{fulltext}}</p><br/>
+    <h1>After Counting</h1><br/>
+    {% for word,number in sortedWorddictionary%}
+    {{word}}--{{number}}<br/>
+    {% endfor %}
+</body>
